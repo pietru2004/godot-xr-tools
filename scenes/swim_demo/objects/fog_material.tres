@@ -1,0 +1,9 @@
+[gd_resource type="FogMaterial" load_steps=2 format=3 uid="uid://bjb15qrohojif"]
+
+[sub_resource type="ImageTexture3D" id="ImageTexture3D_e12a6"]
+
+[resource]
+density = 0.2
+emission = Color(0, 0.384314, 1, 1)
+edge_fade = 1e-05
+density_texture = SubResource("ImageTexture3D_e12a6")
