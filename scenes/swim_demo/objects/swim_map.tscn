@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://bjuel0yobnb7l"]
+[gd_scene load_steps=10 format=3 uid="uid://bjuel0yobnb7l"]
 
 [ext_resource type="Material" path="res://assets/wahooney.itch.io/green_grid_triplanar.tres" id="1_isyto"]
 [ext_resource type="Script" path="res://scenes/swim_demo/objects/swim_effect_chooser.gd" id="1_xhev8"]
 [ext_resource type="Material" path="res://assets/wahooney.itch.io/brown_grid_triplanar.tres" id="2_bp8ee"]
-[ext_resource type="Material" uid="uid://bjb15qrohojif" path="res://scenes/swim_demo/objects/fog_material.tres" id="3_j6s81"]
 [ext_resource type="Environment" uid="uid://bsjehue4f6smf" path="res://scenes/swim_demo/objects/swim_env.tres" id="4_hkcrw"]
 
 [sub_resource type="QuadMesh" id="7"]
@@ -130,11 +129,6 @@ shape = SubResource("4")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("4_hkcrw")
-
-[node name="FogVolume" type="FogVolume" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -12)
-size = Vector3(8, 4, 16)
-material = ExtResource("3_j6s81")
 
 [node name="FogVolWaterPlane" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, -12)
