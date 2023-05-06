@@ -11,11 +11,18 @@
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://3a6wjr3a13vd" path="res://assets/meshes/teleport/teleport.tscn" id="9"]
 [ext_resource type="Texture2D" uid="uid://8jxrr3gqnxck" path="res://scenes/basic_movement_demo/basic movement demo.png" id="10"]
+[ext_resource type="PackedScene" uid="uid://c4d13r420hnx2" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_turn.tscn" id="11_fo0m5"]
 [ext_resource type="Texture2D" uid="uid://c8qc5ja60n3u8" path="res://scenes/teleport_demo/teleport movement demo.png" id="12"]
+[ext_resource type="PackedScene" uid="uid://6uusxts6n6gm" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_direct.tscn" id="12_k66mu"]
 [ext_resource type="Texture2D" uid="uid://d3epm85d4s28f" path="res://scenes/climbing_gliding_demo/climbing_gliding_demo.png" id="13"]
+[ext_resource type="PackedScene" uid="uid://dluln6777mmh3" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_jump.tscn" id="13_o0677"]
+[ext_resource type="PackedScene" uid="uid://dgm5op1hausw5" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_sprint.tscn" id="15_51xh6"]
 [ext_resource type="Texture2D" uid="uid://dwryn8mjdj86m" path="res://scenes/footstep_movement_demo/footstep movement demo.png" id="15_k6bhw"]
+[ext_resource type="PackedScene" uid="uid://bkse5rxsx5tb3" path="res://addons/godot-xr-tools/desktop-support/mouse_capture.tscn" id="15_yoix2"]
 [ext_resource type="Texture2D" uid="uid://bwkm0t73t80cs" path="res://scenes/grappling_demo/grappling_demo.png" id="16"]
+[ext_resource type="PackedScene" uid="uid://cfa5gsol863rv" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_flight.tscn" id="16_xtjge"]
 [ext_resource type="Texture2D" uid="uid://bv0r0klv2u7tl" path="res://scenes/interactables_demo/interactables_demo.png" id="17"]
+[ext_resource type="PackedScene" uid="uid://d2iqcc25yvk61" path="res://addons/godot-xr-tools/desktop-support/movement_desktop_crouch.tscn" id="17_4rh76"]
 [ext_resource type="Texture2D" uid="uid://bh5j2q7vpmr0b" path="res://scenes/pointer_demo/pointer_demo.png" id="20"]
 [ext_resource type="Texture2D" uid="uid://ny4n43p3e3du" path="res://scenes/pickable_demo/pickable_demo.png" id="22"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="23_pr05t"]
@@ -27,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://v4807nasx1dc" path="res://scenes/sprinting_demo/sprinting_demo.png" id="29_h1jn0"]
 [ext_resource type="Texture2D" uid="uid://cr1l4g7btdyht" path="res://scenes/origin_gravity_demo/origin_gravity_demo.png" id="32_c4n1q"]
 [ext_resource type="Texture2D" uid="uid://dhd30j0xpcxoi" path="res://scenes/sphere_world_demo/sphere_world_demo.png" id="34_xw8ig"]
+
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qhob6"]
 animation = &"Grip"
@@ -110,7 +118,6 @@ tree_root = SubResource("AnimationNodeBlendTree_olb4e")
 [node name="FunctionPoseDetector" parent="XROrigin3D/LeftHand" index="1" instance=ExtResource("5_xgcrx")]
 
 [node name="MovementDirect" parent="XROrigin3D/LeftHand" index="2" instance=ExtResource("6")]
-strafe = true
 
 [node name="RightHand" parent="XROrigin3D/RightHand" index="0" instance=ExtResource("25_2b81d")]
 
@@ -134,7 +141,21 @@ tree_root = SubResource("AnimationNodeBlendTree_jwqm7")
 
 [node name="MovementTurn" parent="XROrigin3D/RightHand" index="3" instance=ExtResource("5")]
 
-[node name="PlayerBody" parent="XROrigin3D" index="3" instance=ExtResource("8")]
+[node name="MovementDesktopTurn" parent="XROrigin3D" index="3" instance=ExtResource("11_fo0m5")]
+
+[node name="MovementDesktopDirect" parent="XROrigin3D" index="4" instance=ExtResource("12_k66mu")]
+
+[node name="MovementDesktopJump" parent="XROrigin3D" index="5" instance=ExtResource("13_o0677")]
+
+[node name="MovementDesktopSprint" parent="XROrigin3D" index="6" instance=ExtResource("15_51xh6")]
+
+[node name="MouseCapture" parent="XROrigin3D" index="7" instance=ExtResource("15_yoix2")]
+
+[node name="MovementDesktopFlight" parent="XROrigin3D" index="8" instance=ExtResource("16_xtjge")]
+
+[node name="MovementDesktopCrouch" parent="XROrigin3D" index="9" instance=ExtResource("17_4rh76")]
+
+[node name="PlayerBody" parent="XROrigin3D" index="10" instance=ExtResource("8")]
 
 [node name="BasicMap" parent="." index="1" instance=ExtResource("4")]
 
